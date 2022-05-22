@@ -1,0 +1,139 @@
+//variables
+$base-color: rgb(33, 113, 174);
+$width: 50%;
+$height: 100%;
+$btn-text-color: white; 
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.containers{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  .left{
+  width: $width;
+  height: $height;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border:  2px solid rgb(214, 214, 214);
+    img{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .text{
+      position: absolute;
+      bottom: 5rem;
+      color: rgb(52, 52, 52);
+      h4{
+        font-weight: bold;
+      }
+      p{
+        color: rgb(85, 84, 84);
+        font-weight: 500;
+      }
+    }
+
+  }
+  .right{
+    width: $width;
+    height: $height;
+    display: flex;
+    align-items: center;
+    border:  2px solid rgb(214, 214, 214);
+    form{
+      margin-left: 10rem;
+    }
+  }
+  .create-account{
+    margin-left: 10rem;
+    margin-bottom: 0.5rem;
+  }
+  .form-labels{
+    margin-bottom: 0.2rem;
+    margin-top: 2rem;
+    color:rgb(101, 101, 101);
+  }
+  #inputs{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    transition: 0.5s;
+    outline: none;
+    &:focus{
+      border: 1px solid $base-color;
+    }
+  }
+
+  .createacc-btn{
+    margin-top: 1.5rem;
+    padding: 0.5rem 3rem;
+    font-size: 1.1rem;
+    outline: none;
+    cursor: pointer;
+    background-color: $base-color;
+    color: $btn-text-color;
+    &:hover{
+      background-color: rgb(63, 142, 245);
+    }
+    a{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+  }
+  .checkbox{
+    .check {
+      margin: 2rem 0.3rem 0 0.2rem;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  .error{
+    color: red;
+    position: absolute;
+    font-size: 0.9rem;
+    letter-spacing: 0.02rem;
+  }
+  
+}
+
+@media only screen and (max-width: 1500px){
+.containers{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .left{
+    width: 100%;
+    .text{
+      position: relative;
+    }
+  }
+    .right{
+      width: 100%;
+      justify-content: center;
+      form{
+        margin-left: 0;
+      }
+      .create-account{
+        margin-top: 3rem;
+        text-align: centers;
+        margin-left: 0;
+      }
+      .createacc-btn{
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
